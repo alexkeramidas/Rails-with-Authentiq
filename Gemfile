@@ -34,8 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'bootstrap-sass'
-# gem 'omniauth-authentiq', :git => 'https://github.com/AuthentiqID/omniauth-authentiq.git', :branch => 'backchannel-logout-support'
-gem 'omniauth-authentiq', :path => 'omniauth-authentiq'
+gem 'omniauth-authentiq', :git => 'https://github.com/AuthentiqID/omniauth-authentiq.git', :branch => 'backchannel-logout-support'
 gem 'figaro'
 gem 'pg'
 group :development, :test do

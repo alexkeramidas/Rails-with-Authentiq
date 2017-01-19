@@ -3,10 +3,10 @@ class Users::UsersController < ApplicationController
   before_action :authentiq
 
   def authentiq
-    if params['user_id']
-      Rails.cache.write("omnivise:#{:authentiq}:#{params['user_id']}", params['user_id'], expires_in: 28800)
-      session[:service_tickets] ||= {}
-      session[:service_tickets][:authentiq] = params['user_id']
+    if params['sid']
+      Rails.cache.write("application:#{:authentiq}:#{params['sid']}", params['sid'], expires_in: 28800)
+      session[:authentiq_tickets] ||= {}
+      session[:authentiq_tickets][:authentiq] = params['sid']
     end
     @user = User.from_omniauth(request.env["omniauth.auth"])
     if @user != nil
