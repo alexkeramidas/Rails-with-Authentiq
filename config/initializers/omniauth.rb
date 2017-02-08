@@ -12,6 +12,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
                  end
                end
                ),
+               issuer: 'https://dev.connect.authentiq.io/backchannel-logout/',
                client_options: {
                    :site => 'https://dev.connect.authentiq.io/',
                    :authorize_url => '/backchannel-logout/authorize',
